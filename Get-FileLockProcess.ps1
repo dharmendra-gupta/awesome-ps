@@ -210,11 +210,7 @@ $($PSVersionTable.PSVersion.Major -le 5 -and $PSVersionTable.PSVersion.Major -ge
 }
 [Environment]::NewLine
 if ($Result.id -ne $null) {
-	echo "Killing below mentioned processes"
-	echo $Result
-	Stop-Process -Id $Result.id
-	[Environment]::NewLine
-	echo "Killed all Process blocking: $FilePath"
+	$Result
 } else {
 	echo "No process blocking: $FilePath"
 }
